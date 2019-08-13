@@ -1,0 +1,150 @@
+.container-marcas{
+  /* padding: 10vh 30px; */
+  padding: 13vh 30px;
+  background: 
+    /* linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), */
+    url('./../../assets/backgrounds/fondoultramexico.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.col-marca{
+  height: 27vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.marca{
+  cursor: pointer;
+}
+
+.img-unidad{
+  width: 200px;
+  transition: all 1s;
+}
+
+.col-marca:hover .img-unidad{
+  transform: scale(1.05);
+  filter: brightness(0.5);
+}
+
+.wrap-links{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  position: absolute;
+  bottom: 10px;
+}
+
+.fb, .tw, .wp, .web{
+  opacity: 0;
+  transition: .5s all ease; 
+}
+
+.col-marca:hover .fb{
+  transition: 1.2s all ease;
+  opacity: 1;
+  animation: sizeicon 1s;
+  transition-delay: 0s;
+  animation-delay: 0s;
+}
+
+.col-marca:hover .tw{
+  transition: 1.2s all ease;
+  opacity: 1;
+  animation: sizeicon 1s;
+  transition-delay: .2s;
+  animation-delay: .2s;
+}
+
+.col-marca:hover .wp{
+  transition: 1.2s all ease;
+  opacity: 1;
+  animation: sizeicon 1s;
+  transition-delay: .4s;
+  animation-delay: .4s;
+}
+
+.col-marca:hover .web{
+  transition: 1.2s all ease;
+  opacity: 1;
+  animation: sizeicon 1s;
+  transition-delay: .6s;
+  animation-delay: .6s;
+}
+
+.wrap-links img{
+  width: 40px;
+  /* transition: all .5s !important; */
+  transition-delay: 0 !important;
+}
+
+.wrap-links img:hover{
+  transform: scale(1.2); 
+  cursor: pointer;
+  /* filter: brightness(0.8); */
+}
+
+@keyframes sizeicon {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container-marcas {
+    padding: 13vh 5px;
+  }
+
+  .img-unidad {
+    width: 180px;
+  }
+
+  .wrap-links img {
+    width: 35px;
+  }
+}
+
+@media screen and (max-width: 992px){
+  .container-marcas {
+    /* padding: 2vh 20px; */
+    padding: 7vh 20px 2vh 20px;
+    background-attachment: fixed;
+  }
+
+  .img-unidad {
+    width: 200px;
+  }
+
+  .wrap-links img {
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .col-marca {
+    height: 23vh;
+  }
+
+  .img-unidad {
+    width: 180px;
+  }
+
+  .wrap-links {
+    width: 90%;
+    bottom: -5px;
+  }
+}

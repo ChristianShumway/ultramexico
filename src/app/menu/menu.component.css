@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500i,600,700,900&display=swap');
+
+.is-active{
+  background-color: rgba(0,0,0,0.1);
+  /* color: #7dc142 !important; */
+}
+
+.is-active-movil{
+  background-color: rgba(0,0,0,0.1);
+  color: #00ab95 !important;
+}
+
+.items-menu-movil{
+  display: none;
+}
+
+@media screen and (max-width:992px){
+  .items-menu{
+    display: none;
+  }
+
+  .items-menu-movil{
+    display: block;
+  }
+
+  .container-img{
+    background: url('./../../assets/backgrounds/fondoultramexico.jpg');
+    width: 100%;
+    /* border: 1px solid red; */
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  .container-img p{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 20px;
+    /* color: #616161; */
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    padding-right: 15px;
+    color: #00ab95;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-size: 1.3rem;
+  }
+}
+

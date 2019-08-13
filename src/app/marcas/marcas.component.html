@@ -1,0 +1,23 @@
+<div class="container-marcas">
+  <div class="row row-marcas">
+    <div class="col s12 m6 l3 col-marca animated fadeInUp" *ngFor = "let unidad of unidades">
+      <div class="marca">
+        <img class="img-unidad" src="{{unidad.imagen}}" alt="{{unidad.nombreUnidad}}" />
+      </div>
+      <div class="wrap-links" >
+        <a  mz-button mz-tooltip href="" target="blank" [tooltip]="'Facebook'" [position]="'top'" [html]="true" [delay]="200">
+          <img class="fb" src="./../../assets/iconos/facebook.png" alt="fb" /> 
+        </a> 
+        <a  mz-button mz-tooltip href="" target="blank" [tooltip]="'Twitter'" [position]="'top'" [html]="true" [delay]="200">
+          <img class="tw" src="./../../assets/iconos/twitter.png" alt="tw" /> 
+        </a>            
+        <a  mz-button mz-tooltip href="" target="blank" [tooltip]="'Whatsapp'" [position]="'top'" [html]="true" [delay]="200">
+          <img class="wp" src="./../../assets/iconos/whatsapp.png" alt="wp" /> 
+        </a>
+        <a  mz-button mz-tooltip href="" target="blank" [tooltip]="'Sitio Web'" [position]="'top'" [html]="true" [delay]="200">
+          <img class="web" src="./../../assets/iconos/web.png" alt="web" /> 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,137 @@
+<div class="container-contacto">
+  <div class="row row-contacto">
+    
+    <div class="col s12 m7 l8 col-form-contacto">
+      <h4>¿Cómo te atendimos?</h4>
+      <div class="row">
+        <form class="col s12" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+          <div class="row row-form">
+            <div class="input-field wrap-input col s12">
+              <input 
+                formControlName="nombre" 
+                [(ngModel)] = "nombre"
+                placeholder="Nombre" 
+                id="nombre" 
+                type="text" 
+                class="validate"
+                [ngClass]="{ 'is-invalid': submitted && f.nombre.errors }" 
+              >
+              <!-- <label for="nombre">Nombre</!-->
+              <div class="wrap-invalid">
+                <div *ngIf="submitted && f.nombre.errors" class="invalid-feedback">
+                  <div *ngIf="f.nombre.errors.required">Nombre es un campo requerido</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row row-form">
+            <div class="input-field wrap-input col s12">
+              <input 
+                formControlName="email" 
+                [(ngModel)] = "email"
+                placeholder="Correo Electrónico" 
+                id="correo-electronico" 
+                type="email" 
+                class="validate"
+                [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+              >
+              <!-- <label for="correo-electronico">Correo Electrónico</!--> 
+              <div class="wrap-invalid">
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                  <div *ngIf="f.email.errors.required">Email es un campo requerido</div>
+                  <div *ngIf="f.email.errors.email">Email debe ser una dirección de correo electrónico valida</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row row-form">
+            <div class="input-field wrap-input col s12">
+              <input placeholder="Teléfono" id="telefono" type="text" class="validate">
+              <!-- <label for="telefono">Teléfono</label> -->
+              <div class="wrap-no-invalid"></div>
+            </div>
+          </div>
+          <div class="row row-form">
+            <div class="input-field wrap-input col s12">
+              <mz-select-container [ngClass]="{ 'is-invalid': submitted && f.empresa.errors }">
+                <select mz-select
+                  formControlName="empresa" 
+                  id="options-select"
+                  class="validate"
+                  [placeholder]="'Empresa que te atendio'"
+                  [(ngModel)] = "empresa"
+                  [ngClass]="{ 'is-invalid': submitted && f.empresa.errors }"
+                >
+                  <option data-icon="./../../assets/iconos/success.png" value="aguila maya" class="left circle">Aguila Maya</option>
+                  <option data-icon="./../../assets/iconos/success.png" value="arma ideas" class="left circle">Arma Ideas</option>
+                  <option data-icon="./../../assets/iconos/success.png" value="radio ranchito" class="left circle">Radio Ranchito</option>
+                  <option data-icon="./../../assets/iconos/success.png" value="telemetrika" class="left circle">Telemétrika</option>
+                  <option data-icon="./../../assets/iconos/success.png" value="ultra acoustics" class="left circle">Ultra Acoustics</option>
+                  <option data-icon="./../../assets/iconos/success.png" value="Urbanismo Positivo" class="left circle">Urbanismo Positivo</option>
+                </select>
+                <div class="wrap-invalid">
+                  <div *ngIf="submitted && f.empresa.errors" class="invalid-feedback">
+                    <div *ngIf="f.empresa.errors.required">Empresa es un campo requerido</div>
+                  </div>
+                </div>
+              </mz-select-container>
+            </div>
+          </div>
+          <div class="row row-form">
+            <div class="input-field wrap-input col s12">
+              <input 
+                formControlName="asunto"    
+                [(ngModel)] = "asunto"
+                placeholder="Asunto" 
+                id="asunto" 
+                type="text" 
+                class="validate"
+                [ngClass]="{ 'is-invalid': submitted && f.asunto.errors }"
+              >
+              <!-- <label for="asunto">Asunto</label> -->
+              <div class="wrap-invalid">
+                <div *ngIf="submitted && f.asunto.errors" class="invalid-feedback">
+                  <div *ngIf="f.asunto.errors.required">Asunto es un campo requerido</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row row-form">
+            <div class="input-field wrap-input col s12">
+              <span>Mensaje</span>
+              <textarea 
+                formControlName="mensaje" 
+                [(ngModel)] = "mensaje" 
+                id="mensaje" 
+                class="materialize-textarea validate"
+                [ngClass]="{ 'is-invalid': submitted && f.mensaje.errors }"
+              ></textarea>
+              <!-- <label for="mensaje">Mensaje</label> -->
+              <div class="wrap-invalid">
+                <div *ngIf="submitted && f.mensaje.errors" class="invalid-feedback">
+                  <div *ngIf="f.mensaje.errors.required">Mensaje es un campo requerido</div>
+                  <div *ngIf="f.mensaje.errors.minlength">Mensaje debe ser mayor a 10 caracteres</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row row-form">
+            <div class="input-field wrap-button col s12">
+              <button type="submit" class="btn" >ENVIAR</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="col s12 m5 l4 col-background-contacto">
+      <div class="back">
+        <div class="wrap-logo">
+          <img src="./../../assets/logos/um.png" alt="um" />
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

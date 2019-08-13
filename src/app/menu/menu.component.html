@@ -1,0 +1,53 @@
+<mz-navbar>
+  <a routerLink="marcas" class="brand-logo">
+    <img src="./../../assets/logos/um.png" alt="um" />
+  </a>
+  <mz-navbar-item-container [align]="'right'" class="items-menu">
+    <mz-navbar-item>
+      <a routerLink="marcas" routerLinkActive="is-active">Marcas</a>
+    </mz-navbar-item>
+    <mz-navbar-item>
+      <a routerLink="nosotros" routerLinkActive="is-active">Nosotros</a>
+    </mz-navbar-item>
+    <mz-navbar-item>
+      <a routerLink="contacto" routerLinkActive="is-active">Contacto</a>
+    </mz-navbar-item>
+    <mz-navbar-item>
+      <a routerLink="como-te-atendimos" routerLinkActive="is-active">Como te atendimos</a>
+    </mz-navbar-item>
+  </mz-navbar-item-container>
+  <mz-navbar-item-container class="items-menu-movil">
+    <a mz-button id="btn-sidenav-demo"  >
+      <i class="material-icons" >menu</i>
+    </a>
+  </mz-navbar-item-container>
+</mz-navbar>
+
+<mz-sidenav
+  [id]="'sidenav-demo'"
+  [collapseButtonId]="'btn-sidenav-demo'"
+  [closeOnClick] = true
+>
+  <mz-sidenav-header>
+    <div class="container-img">
+      <p>Ultra México</p>
+    </div>
+  </mz-sidenav-header>
+  <!-- <mz-sidenav-divider></mz-sidenav-divider> -->
+  <mz-sidenav-link>
+    <a  routerLink="marcas" routerLinkActive="is-active-movil" >Marcas</a>
+  </mz-sidenav-link>
+  <mz-sidenav-link>
+      <a  routerLink="nosotros" routerLinkActive="is-active-movil">Nosotros</a>
+  </mz-sidenav-link>
+  <mz-sidenav-link>
+    <a  routerLink="contacto" routerLinkActive="is-active-movil">Contacto</a>
+  </mz-sidenav-link>
+  <mz-sidenav-link>
+    <a  routerLink="como-te-atendimos" routerLinkActive="is-active-movil">Como te atendimos</a>
+  </mz-sidenav-link>
+ 
+</mz-sidenav>
+ <!-- <button mz-button id="btn-sidenav-demo">
+  Open
+</button> -->
